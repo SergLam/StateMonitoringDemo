@@ -25,7 +25,7 @@ class RegularTheme: Theme {
     
     class LabelThemeRegular: LabelTheme {
         var backgroundColor: UIColor = .clear
-        var fontColor: UIColor = .white
+        var fontColor: UIColor = .darkText
     }
     
     class ImageViewThemeRegular: ImageViewTheme {
@@ -34,18 +34,18 @@ class RegularTheme: Theme {
     
     class ButtonThemeRegular: ButtonTheme {
         var backgroundColor: UIColor = .clear
-        var tintColor: UIColor = .white
+        var tintColor: UIColor = .darkText
     }
     
     class BlurThemeRegular: BlurTheme {
         var backgroundColor: UIColor = .clear
         var vibrancy: Bool = false
-        var effectStyle: UIBlurEffect.Style = .dark
+        var effectStyle: UIBlurEffect.Style = .light
         var blurAvailable: Bool = true
     }
     
     class NavigationBarThemeRegular: NavigationBarTheme {
         var backgroundColor: UIColor = .white
-        var titleColor: UIColor = .black
+        var titleColor: UIColor = .darkText
     }
 }

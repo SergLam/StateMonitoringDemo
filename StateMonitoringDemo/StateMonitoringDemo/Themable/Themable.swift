@@ -58,7 +58,7 @@ protocol ButtonTheme {
 extension UIButton: Themable {
     func apply(theme: Theme) {
         self.backgroundColor = theme.buttonTheme.backgroundColor
-        self.titleLabel?.textColor = theme.buttonTheme.tintColor
+        self.setTitleColor(theme.buttonTheme.tintColor, for: .normal)
     }
 }
 
@@ -105,7 +105,7 @@ protocol Theme {
 
 class ThemeStorage {
     static let shared = ThemeStorage()
-    private var currentStyle: ThemeStyle = .regular
+    private var currentStyle: ThemeStyle = .safe
 }
 
 extension ThemeStorage {
