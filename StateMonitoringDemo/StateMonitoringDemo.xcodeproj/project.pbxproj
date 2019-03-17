@@ -16,6 +16,10 @@
 		7E0D6E1B223E817500222224 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6E1A223E817500222224 /* ImageCollectionViewCell.swift */; };
 		7E0D6E1E223E81CF00222224 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0D6E1D223E81CF00222224 /* ProfileDataSource.swift */; };
 		7E90D50C223E89B300B37495 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E90D50B223E89B300B37495 /* GridLayout.swift */; };
+		7E90D515223EADDB00B37495 /* Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E90D514223EADDB00B37495 /* Themable.swift */; };
+		7E90D517223EB97900B37495 /* RegularTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E90D516223EB97900B37495 /* RegularTheme.swift */; };
+		7E90D519223EB99B00B37495 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E90D518223EB99B00B37495 /* DarkTheme.swift */; };
+		7E90D51B223EB9D100B37495 /* SafeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E90D51A223EB9D100B37495 /* SafeTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		7E0D6E1A223E817500222224 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E0D6E1D223E81CF00222224 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
 		7E90D50B223E89B300B37495 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		7E90D514223EADDB00B37495 /* Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themable.swift; sourceTree = "<group>"; };
+		7E90D516223EB97900B37495 /* RegularTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTheme.swift; sourceTree = "<group>"; };
+		7E90D518223EB99B00B37495 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		7E90D51A223EB9D100B37495 /* SafeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,9 @@
 		7E0D6DFF223E603E00222224 /* StateMonitoringDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7E0D6E1C223E81BC00222224 /* DataSources */,
 				7E0D6E00223E603E00222224 /* AppDelegate.swift */,
+				7E90D513223EAD3A00B37495 /* Themable */,
+				7E0D6E1C223E81BC00222224 /* DataSources */,
 				7E0D6E15223E609200222224 /* Views */,
 				7E0D6E14223E607700222224 /* Resources */,
 				7E0D6E13223E607000222224 /* Storyboards */,
@@ -114,6 +123,17 @@
 				7E90D50B223E89B300B37495 /* GridLayout.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		7E90D513223EAD3A00B37495 /* Themable */ = {
+			isa = PBXGroup;
+			children = (
+				7E90D514223EADDB00B37495 /* Themable.swift */,
+				7E90D516223EB97900B37495 /* RegularTheme.swift */,
+				7E90D518223EB99B00B37495 /* DarkTheme.swift */,
+				7E90D51A223EB9D100B37495 /* SafeTheme.swift */,
+			);
+			path = Themable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +209,14 @@
 			files = (
 				7E0D6E03223E603E00222224 /* ViewController.swift in Sources */,
 				7E0D6E19223E80CD00222224 /* ProvileHeaderCollectionView.swift in Sources */,
+				7E90D51B223EB9D100B37495 /* SafeTheme.swift in Sources */,
+				7E90D517223EB97900B37495 /* RegularTheme.swift in Sources */,
 				7E0D6E1E223E81CF00222224 /* ProfileDataSource.swift in Sources */,
+				7E90D519223EB99B00B37495 /* DarkTheme.swift in Sources */,
 				7E90D50C223E89B300B37495 /* GridLayout.swift in Sources */,
 				7E0D6E1B223E817500222224 /* ImageCollectionViewCell.swift in Sources */,
 				7E0D6E01223E603E00222224 /* AppDelegate.swift in Sources */,
+				7E90D515223EADDB00B37495 /* Themable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

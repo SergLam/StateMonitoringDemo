@@ -31,6 +31,7 @@ class ProfileDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.describingSelf,
                                                       for: indexPath) as? ImageCollectionViewCell
         cell?.contentImageView.image = images[indexPath.row]
+        cell?.apply(theme: ThemeStorage.shared.current)
         return cell ?? UICollectionViewCell()
     }
     
@@ -38,6 +39,7 @@ class ProfileDataSource: NSObject, UICollectionViewDataSource {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                      withReuseIdentifier: ProvileHeaderCollectionView.describingSelf,
                                                                      for: indexPath) as? ProvileHeaderCollectionView
+        header?.apply(theme: ThemeStorage.shared.current)
         return header ?? ProvileHeaderCollectionView()
     }
 }

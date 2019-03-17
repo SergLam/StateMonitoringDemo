@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.navigationBar.apply(theme: ThemeStorage.shared.current)
+        collectionView.apply(theme: ThemeStorage.shared.current)
     }
-
-
 }
 

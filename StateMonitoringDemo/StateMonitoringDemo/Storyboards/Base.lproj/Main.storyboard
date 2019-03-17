@@ -14,10 +14,11 @@
         <scene sceneID="slK-tS-RwL">
             <objects>
                 <navigationController id="AZN-Xy-mE5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IaG-5E-N3m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="IaG-5E-N3m">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tbK-oZ-ebH"/>
@@ -32,11 +33,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StateMonitoringDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eng-N9-ujI">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="ZMG-N5-Zii" customClass="GridLayout" customModule="StateMonitoringDemo" customModuleProvider="target">
                                     <size key="itemSize" width="115" height="113"/>
@@ -106,7 +107,7 @@
                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJw-Vb-4Ka">
                                             <rect key="frame" x="95" y="200" width="185" height="24"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="185" id="8Ff-F3-IDb"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="8Ff-F3-IDb"/>
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                             <state key="normal" title="Kharkiv Ukraine" image="locationButton">
@@ -148,13 +149,6 @@ followers</string>
                                                 <constraint firstAttribute="height" constant="54" id="eiw-zc-lKj"/>
                                             </constraints>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTC-7I-gy8">
-                                            <rect key="frame" x="0.0" y="323" width="375" height="1"/>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="qMm-SH-NAl"/>
-                                            </constraints>
-                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -162,28 +156,26 @@ followers</string>
                                         <constraint firstItem="xMJ-sx-dqg" firstAttribute="centerX" secondItem="Q4j-9T-GE3" secondAttribute="centerX" id="3WK-hh-rqh"/>
                                         <constraint firstItem="YJw-Vb-4Ka" firstAttribute="top" secondItem="xMJ-sx-dqg" secondAttribute="bottom" constant="30" id="4wS-1y-zrK"/>
                                         <constraint firstItem="RfD-qA-7ut" firstAttribute="centerY" secondItem="Q4j-9T-GE3" secondAttribute="centerY" id="AxR-LC-VzO"/>
-                                        <constraint firstAttribute="trailing" secondItem="yTC-7I-gy8" secondAttribute="trailing" id="IZ3-i0-XgC"/>
                                         <constraint firstItem="eZ5-WL-uGq" firstAttribute="height" secondItem="RfD-qA-7ut" secondAttribute="height" id="NAF-OQ-9dD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="xtv-H6-7U4" secondAttribute="trailing" id="NFE-W9-aMQ"/>
                                         <constraint firstItem="YJw-Vb-4Ka" firstAttribute="centerX" secondItem="xMJ-sx-dqg" secondAttribute="centerX" id="PAL-fK-1L1"/>
                                         <constraint firstItem="xMJ-sx-dqg" firstAttribute="centerY" secondItem="Q4j-9T-GE3" secondAttribute="centerY" multiplier="0.65" id="Qbx-Us-JEq"/>
                                         <constraint firstItem="RfD-qA-7ut" firstAttribute="centerX" secondItem="Q4j-9T-GE3" secondAttribute="centerX" id="Sqi-ST-nP8"/>
-                                        <constraint firstItem="yTC-7I-gy8" firstAttribute="leading" secondItem="Q4j-9T-GE3" secondAttribute="leading" id="Ywa-vx-aCV"/>
                                         <constraint firstItem="xtv-H6-7U4" firstAttribute="leading" secondItem="Q4j-9T-GE3" secondAttribute="leadingMargin" id="a5S-W7-IRI"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xtv-H6-7U4" secondAttribute="bottom" id="cQv-7q-fNd"/>
                                         <constraint firstItem="xMJ-sx-dqg" firstAttribute="height" secondItem="Q4j-9T-GE3" secondAttribute="height" multiplier="0.4" id="e0z-29-cHl"/>
-                                        <constraint firstAttribute="bottom" secondItem="yTC-7I-gy8" secondAttribute="bottom" id="iHf-lr-T0b"/>
                                         <constraint firstItem="eZ5-WL-uGq" firstAttribute="width" secondItem="RfD-qA-7ut" secondAttribute="width" id="oHi-o4-Ul7"/>
                                         <constraint firstItem="RfD-qA-7ut" firstAttribute="height" secondItem="Q4j-9T-GE3" secondAttribute="height" id="oqG-hF-wUP"/>
                                         <constraint firstItem="eZ5-WL-uGq" firstAttribute="centerY" secondItem="RfD-qA-7ut" secondAttribute="centerY" id="pFl-eL-hJb"/>
                                         <constraint firstItem="RfD-qA-7ut" firstAttribute="width" secondItem="Q4j-9T-GE3" secondAttribute="width" id="rua-7R-duH"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="bottomSeparatorView" destination="yTC-7I-gy8" id="MFh-LD-F1v"/>
+                                        <outlet property="blurView" destination="eZ5-WL-uGq" id="aSi-Sp-TCj"/>
                                         <outlet property="followersLabel" destination="8ps-f6-2h1" id="R4u-bF-0pT"/>
                                         <outlet property="locationButton" destination="YJw-Vb-4Ka" id="bUe-kj-oGu"/>
                                         <outlet property="photosLabel" destination="09y-vh-WO4" id="OKa-dC-mXm"/>
                                         <outlet property="ratingLabel" destination="9ca-Y3-7vR" id="o8m-XX-Qi4"/>
+                                        <outlet property="underBlurView" destination="RfD-qA-7ut" id="Y7m-Fm-1iS"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
@@ -201,6 +193,9 @@ followers</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Eric Parker" id="w4r-xh-XWS"/>
+                    <connections>
+                        <outlet property="collectionView" destination="eng-N9-ujI" id="7E4-eb-TnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="wyr-Tg-2Dq" customClass="ProfileDataSource" customModule="StateMonitoringDemo" customModuleProvider="target"/>
