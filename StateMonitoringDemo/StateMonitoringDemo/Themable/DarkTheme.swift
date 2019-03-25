@@ -17,6 +17,7 @@ class DarkTheme: Theme {
     var blurTheme: BlurTheme = BlurThemeDark()
     var navigationBarTheme: NavigationBarTheme = NavigationBarThemeDark()
     var backgroundTasksAvailable: Bool = true
+    var recomendedBrightnessLevel: CGFloat = 0.5
     
     
     class CollectionViewThemeDark: CollectionViewTheme {

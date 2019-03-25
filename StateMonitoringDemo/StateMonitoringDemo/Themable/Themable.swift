@@ -25,6 +25,7 @@ protocol CollectionViewTheme {
 extension UICollectionView: Themable {
     func apply(theme: Theme) {
         self.backgroundColor = theme.collectionViewTheme.backgroundColor
+        reloadData()
     }
 }
 
@@ -101,11 +102,12 @@ protocol Theme {
     var blurTheme: BlurTheme { get }
     var navigationBarTheme: NavigationBarTheme { get }
     var backgroundTasksAvailable : Bool { get }
+    var recomendedBrightnessLevel: CGFloat { get }
 }
 
 class ThemeStorage {
     static let shared = ThemeStorage()
-    private var currentStyle: ThemeStyle = .safe
+    var currentStyle: ThemeStyle = .regular
 }
 
 extension ThemeStorage {

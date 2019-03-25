@@ -1,0 +1,6 @@
+framework module Pods_StateMonitoringDemo {
+  umbrella header "Pods-StateMonitoringDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
