@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         apply(theme: ThemeStorage.shared.current)
     }
     
-    //just hak to demonstrate - need to figure out how to heat device
+    //just hack to demonstrate - need to figure out how to heat real device
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             ThemeStorage.shared.currentStyle = .safe
@@ -37,7 +37,7 @@ extension ViewController: Themable {
             self.navigationController?.navigationBar.apply(theme: ThemeStorage.shared.current)
             self.collectionView.apply(theme: ThemeStorage.shared.current)
             self.navigationController?.navigationBar.layoutSubviews()
-            UIScreen.main.brightness = CGFloat(theme.recomendedBrightnessLevel)
+            UIScreen.main.brightness = CGFloat(theme.recommendedBrightnessLevel)
         }
     }
 }
@@ -47,8 +47,7 @@ enum MessageType: String {
     case darkTheme = "Hey! Swiched to dark theme"
     case regularTheme = "Hey! Swiched to regular theme"
     case charging = "We are charging - switched to regular theme"
-    case overTermal = "Hey! We are Burning - switched to safe theme"
-    
+    case overTermal = "Hey! We are burning - switched to safe theme"
 }
 
 extension ViewController: StateHandler {

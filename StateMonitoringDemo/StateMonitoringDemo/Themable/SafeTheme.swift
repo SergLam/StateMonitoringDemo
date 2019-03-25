@@ -17,7 +17,7 @@ class SafeTheme: Theme {
     var blurTheme: BlurTheme = BlurThemeSafe()
     var navigationBarTheme: NavigationBarTheme = NavigationBarThemeSafe()
     var backgroundTasksAvailable: Bool = false
-    var recomendedBrightnessLevel: CGFloat = 0.2
+    var recommendedBrightnessLevel: CGFloat = 0.2
     
     class CollectionViewThemeSafe: CollectionViewTheme {
         var backgroundColor: UIColor = .black

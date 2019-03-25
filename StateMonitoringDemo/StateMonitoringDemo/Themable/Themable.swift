@@ -102,7 +102,7 @@ protocol Theme {
     var blurTheme: BlurTheme { get }
     var navigationBarTheme: NavigationBarTheme { get }
     var backgroundTasksAvailable : Bool { get }
-    var recomendedBrightnessLevel: CGFloat { get }
+    var recommendedBrightnessLevel: CGFloat { get }
 }
 
 class ThemeStorage {

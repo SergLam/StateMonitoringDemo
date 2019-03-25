@@ -17,7 +17,7 @@ class RegularTheme: Theme {
     var blurTheme: BlurTheme = BlurThemeRegular()
     var navigationBarTheme: NavigationBarTheme = NavigationBarThemeRegular()
     var backgroundTasksAvailable: Bool = true
-    var recomendedBrightnessLevel: CGFloat = 1.0
+    var recommendedBrightnessLevel: CGFloat = 1.0
 
     class CollectionViewThemeRegular: CollectionViewTheme {
         var backgroundColor: UIColor = .white

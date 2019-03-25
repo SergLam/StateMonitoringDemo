@@ -76,6 +76,22 @@ enum TermalState {
     case nominal
 }
 
+// MARK: - Thermal handling
+extension StateMonitor {
+    @objc func termalStateDidChange(_ notification: NSNotification) {
+        switch ProcessInfo.processInfo.thermalState {
+        case .fair:
+            delegate.didChangeTermalState(state: .fair)
+        case .critical:
+            delegate.didChangeTermalState(state: .critical)
+        case .serious:
+            delegate.didChangeTermalState(state: .serious)
+        case .nominal:
+            delegate.didChangeTermalState(state: .nominal)
+        }
+    }
+}
+
 // MARK: - Power & battery handling
 extension StateMonitor {
     @objc func batteryStateDidChange(_ notification: NSNotification) {
@@ -88,19 +104,6 @@ extension StateMonitor {
              delegate.didChangePowerState(state: .unplugged)
         case .unknown:
              delegate.didChangePowerState(state: .unplugged)
-        }
-    }
-    
-    @objc func termalStateDidChange(_ notification: NSNotification) {
-        switch ProcessInfo.processInfo.thermalState {
-        case .fair:
-            delegate.didChangeTermalState(state: .fair)
-        case .critical:
-          delegate.didChangeTermalState(state: .critical)
-        case .serious:
-            delegate.didChangeTermalState(state: .serious)
-        case .nominal:
-            delegate.didChangeTermalState(state: .nominal)
         }
     }
     
