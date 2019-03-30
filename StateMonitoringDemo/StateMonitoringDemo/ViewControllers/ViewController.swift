@@ -82,7 +82,11 @@ extension ViewController: StateHandler {
             apply(theme: ThemeStorage.shared.current)
             present(message: .overTermal)
         }
-    }    
+    }
+
+    func didChangeOrientation(orientation: UIDeviceOrientation) {
+        UIScreen.main.brightness = orientation == .faceDown ? 0 : 1
+    }
 }
 
 extension ViewController {

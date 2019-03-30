@@ -14,6 +14,7 @@ protocol StateHandler: class {
     func didChangePowerMode(state: PowerMode)
     func didChangePowerState(state: PowerState)
     func didChangeTermalState(state: TermalState)
+    func didChangeOrientation(orientation: UIDeviceOrientation)
 }
 
 class StateMonitor {
@@ -21,8 +22,14 @@ class StateMonitor {
     
     init(with delegate: StateHandler) {
         self.delegate = delegate
-        UIDevice.current.isBatteryMonitoringEnabled = true
         try? AVAudioSession.sharedInstance().setActive(true, options: [])
+
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(orientationStateDidChange(_:)),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(batteryStateDidChange(_:)),
                                                name: UIDevice.batteryStateDidChangeNotification,
@@ -42,8 +49,9 @@ class StateMonitor {
     }
     
     deinit {
-        UIDevice.current.isBatteryMonitoringEnabled = false
         NotificationCenter.default.removeObserver(self)
+        UIDevice.current.isBatteryMonitoringEnabled = false
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
 }
 
@@ -74,6 +82,13 @@ enum TermalState {
     case critical
     case serious
     case nominal
+}
+
+// MARK: - Orientation handling
+extension StateMonitor {
+    @objc func orientationStateDidChange(_ notification: NSNotification) {
+        delegate.didChangeOrientation(orientation: UIDevice.current.orientation)
+    }
 }
 
 // MARK: - Thermal handling
